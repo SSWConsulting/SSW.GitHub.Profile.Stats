@@ -1,0 +1,10 @@
+services:
+  stats:
+    build: .
+    ports:
+      - "9000:9000"
+    env_file:
+      - .env
+    environment:
+      - PORT=9000
+    restart: unless-stopped
